@@ -1,0 +1,56 @@
+<style>
+#header {
+    width:320px;
+    height:40px;
+    background-color:black;
+    color:white;
+    text-align:center;
+    padding:0px;
+    border: 1px solid black;
+}
+#section {
+    width:320px;
+    height:420px;
+    float:left;
+    padding:1px; 
+    border: 1px solid black;
+}
+.nav_button {
+    background-color: #4CAF50;
+    font-size: 9px;
+    width:60px;
+    height:20px;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    /*display: inline-block;
+    margin: 4px 2px;
+    padding: 15px 32px;*/
+    cursor: pointer;
+}
+.act_button {
+    background-color: #FF4000;
+    font-size: 9px;
+    width:60px;
+    height:20px;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    /*display: inline-block;
+    margin: 4px 2px;
+    padding: 15px 32px;*/
+    cursor: pointer;
+}
+#footer {
+    width:320px;
+    height:20px;
+    background-color:black;
+    color:white;
+    clear:both;
+    text-align:center;
+    padding:0px; 
+    border: 1px solid black;
+}
+</style>

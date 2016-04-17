@@ -68,17 +68,16 @@ void handleFileUpload() {
   HTTPUpload& upload = server.upload();
   if (upload.status == UPLOAD_FILE_START) {
     String filename = upload.filename;
-    if (!filename.startsWith("/")) filename = "/" + filename;
-    Serial.print("handleFileUpload Name: "); Serial.println(filename);
-    fsUploadFile = SPIFFS.open(filename, "w");
-    filename = String();
-  } else if (upload.status == UPLOAD_FILE_WRITE) {
+      if (!filename.startsWith("/")) filename = "/" + filename;
+      Serial.print("handleFileUpload Name: "); Serial.println(filename);
+      fsUploadFile = SPIFFS.open(filename, "w");
+      filename = String();
+  }
+  else if (upload.status == UPLOAD_FILE_WRITE) {
     //Serial.print("handleFileUpload Data: "); Serial.println(upload.currentSize);
-    if (fsUploadFile)
-      fsUploadFile.write(upload.buf, upload.currentSize);
+    if (fsUploadFile) fsUploadFile.write(upload.buf, upload.currentSize);
   } else if (upload.status == UPLOAD_FILE_END) {
-    if (fsUploadFile)
-      fsUploadFile.close();
+    if (fsUploadFile) fsUploadFile.close();
     Serial.print("handleFileUpload Size: "); Serial.println(upload.totalSize);
   }
 }
